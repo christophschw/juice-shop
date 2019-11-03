@@ -76,6 +76,7 @@
     "awareness"
   ],
   "dependencies": {
+    "njstrace": "1.1.2",
     "body-parser": "^1.19.0",
     "check-dependencies": "^1.1.0",
     "clarinet": "^0.12.3",
@@ -169,6 +170,7 @@
     "serve": "concurrently --kill-others \"node app\" \"cd frontend && ng serve\"",
     "build": "cd frontend && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build --aot --prod --output-hashing=none --vendor-chunk=true --source-map=false",
     "start": "node app",
+    "start:njstrace": "node njstrace",
     "lint": "standard && cd frontend && ng lint && cd ..",
     "lint:fix": "standard --fix && cd frontend && ng lint --fix && cd ..",
     "test": "cd frontend && ng test --watch=false --source-map=false && cd .. && nyc --report-dir=./build/reports/coverage/server-tests mocha test/server",
